@@ -17,9 +17,9 @@ app.get('/ourservices',function(req,res, ){
 app.use(date= (req,res,next)=> {
    const start = new Date()
    const hours = start.getHours()
-   if((hours<22)&&(hours>7)) {
+   if((hours<18)&&(hours>7)) {
        app.use(express.static(__dirname+'/public')) 
-   }else res.send('Serrver0not available')
+   }else res.send('Server not available')
  
    next()
 })
